@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <!-- ===================================================================
+       EDIT ZONE 1 — PAGE TITLE (DONE)
+  ==================================================================== -->
+  <title>Utomi Michael Ikechukwu — AI Business Operations Specialist</title>
+
+  <meta name="description" content="AI Business Operations Specialist. Process improvement, business analysis, project coordination and AI governance. Real consulting case study: end-to-end transformation of a five-site healthcare group." />
+
+  <style>
+    /* ---- COLOUR PALETTE (black + gold — luxury, professional). Edit to rebrand. ---- */
+    :root {
+      --bg:      #0a0a0a;   /* page background (rich black) */
+      --bg-soft: #161616;   /* cards (charcoal black) */
+      --accent:  #d4af37;   /* gold highlight */
+      --accent-soft: rgba(212,175,55,.10);
+      --bright:  #f5f0e6;   /* headings (warm ivory) */
+      --light:   #e0d5b8;   /* soft gold-cream */
+      --body:    #b8ada0;   /* body text (warm taupe-grey) */
+      --muted:   #8a8070;   /* muted (dim gold-grey) */
+      --line:    #2a2620;   /* subtle warm dark border */
+      --radius:  14px;
+      --max:     820px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--body);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+    /* subtle spotlight glow behind the page */
+    body::before {
+      content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+      background: radial-gradient(700px at 50% -5%, rgba(212,175,55,.12), transparent 70%);
+    }
+
+    /* ---------- HERO ---------- */
+    header {
+      text-align: center;
+      padding: 56px 20px 40px;
+      background: linear-gradient(160deg, #1a1710 0%, var(--bg) 70%);
+      border-bottom: 1px solid var(--line);
+    }
+    .open-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: var(--accent-soft); color: var(--accent);
+      font-weight: 700; font-size: .82rem;
+      padding: 6px 14px; border-radius: 999px; margin-bottom: 18px;
+    }
+    .open-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px rgba(212,175,55,.25); }
+    header .avatar {
+      width: 116px; height: 116px; border-radius: 50%;
+      object-fit: cover; border: 3px solid var(--accent);
+      box-shadow: 0 0 24px rgba(212,175,55,.35), 0 6px 22px rgba(0,0,0,.6); margin: 0 auto 16px;
+      background: rgba(212,175,55,.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: var(--accent);
+      font-weight: bold;
+    }
+    header h1 { font-size: 2rem; letter-spacing: -0.5px; color: var(--bright); }
+    header .tagline { color: var(--accent); font-weight: 700; margin-top: 6px; font-size: 1.1rem; }
+    header .subline { color: var(--body); margin-top: 8px; font-size: .98rem; }
+    header .location { color: var(--muted); margin-top: 8px; font-size: .88rem; }
+
+    .links { margin-top: 20px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .links a {
+      text-decoration: none; font-size: .92rem; font-weight: 600;
+      color: var(--light); border: 1px solid var(--line); background: transparent;
+      padding: 10px 18px; border-radius: 999px; transition: all .15s ease;
+    }
+    .links a:hover { color: var(--accent); border-color: var(--accent); }
+    .links a.primary { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); }
+    .links a.primary:hover { background: rgba(212,175,55,.18); }
+
+    /* ---------- STAT STRIP ---------- */
+    .stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 26px; }
+    .stat {
+      background: var(--bg-soft); border: 1px solid var(--line); border-radius: 12px;
+      padding: 12px 16px; min-width: 120px; text-align: center;
+    }
+    .stat b { display: block; font-size: 1.25rem; color: var(--accent); }
+    .stat span { font-size: .78rem; color: var(--muted); }
+
+    /* ---------- SECTIONS ---------- */
+    section { padding: 44px 0; border-bottom: 1px solid var(--line); }
+    section h2 { font-size: 1.35rem; margin-bottom: 8px; color: var(--bright); display: flex; align-items: center; gap: 8px; position: relative; padding-bottom: 10px; }
+    section h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 42px; height: 2px; background: var(--accent); }
+    section .lead { color: var(--muted); margin-bottom: 20px; }
+    .about p { color: var(--body); font-size: 1.03rem; }
+
+    /* ---------- ROLES ---------- */
+    .roles { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+    .role { background: var(--accent-soft); border: 1px solid rgba(212,175,55,.25); color: var(--accent);
+      padding: 7px 14px; border-radius: 999px; font-size: .88rem; font-weight: 600; }
+
+    .cv-btn {
+      display: inline-block; margin-top: 4px; margin-right: 8px; color: var(--accent);
+      border: 1px solid var(--accent); text-decoration: none; font-weight: 700;
+      padding: 13px 26px; border-radius: var(--radius); transition: background .15s ease;
+    }
+    .cv-btn:hover { background: var(--accent-soft); }
+
+    /* ---------- EXPERIENCE ---------- */
+    .job { border-left: 2px solid var(--line); padding: 0 0 22px 18px; position: relative; }
+    .job:last-child { padding-bottom: 0; }
+    .job::before { content: ''; position: absolute; left: -6px; top: 6px; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); }
+    .job .when { font-size: .74rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .5px; }
+    .job h3 { font-size: 1.05rem; margin: 3px 0 2px; color: var(--bright); }
+    .job .org { font-size: .9rem; color: var(--muted); margin-bottom: 8px; }
+    .job ul { margin: 0 0 0 18px; }
+    .job li { font-size: .92rem; margin-bottom: 6px; }
+
+    /* ---------- PROJECT CARDS ---------- */
+    .grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+    .card {
+      position: relative; background: var(--bg-soft); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 18px; transition: border-color .15s ease, transform .15s ease;
+    }
+    .card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(212,175,55,.12); }
+    .card.star { border-color: rgba(212,175,55,.35); }
+    .card .week { font-size: .72rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .5px; }
+    .card h3 { font-size: 1.05rem; margin: 4px 0 6px; color: var(--bright); }
+    .card p { color: var(--body); font-size: .92rem; }
+    .card a {
+      display: inline-block; margin-top: 12px; font-weight: 700; font-size: .9rem;
+      color: #0a0a0a; background: var(--accent); padding: 8px 15px; border-radius: 9px; text-decoration: none;
+    }
+    .card a:hover { filter: brightness(1.1); }
+    .card.locked { opacity: .5; }
+    .badge {
+      display: inline-block; font-size: .72rem; font-weight: 700; margin-top: 12px;
+      background: rgba(148,163,184,.12); color: var(--muted); padding: 4px 10px; border-radius: 999px;
+    }
+    .ribbon {
+      position: absolute; top: 14px; right: 14px; font-size: .64rem; font-weight: 800;
+      background: var(--accent-soft); color: var(--accent); padding: 3px 9px; border-radius: 999px;
+      letter-spacing: .3px; text-transform: uppercase;
+    }
+
+    /* ---------- SKILLS ---------- */
+    .skillgroup { margin-bottom: 18px; }
+    .skillgroup h4 { font-size: .82rem; text-transform: uppercase; letter-spacing: .6px; color: var(--muted); margin-bottom: 10px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { background: var(--accent-soft); border: 1px solid rgba(212,175,55,.22); color: var(--accent);
+      padding: 7px 13px; border-radius: 999px; font-size: .85rem; font-weight: 600; }
+
+    /* ---------- FOOTER ---------- */
+    footer { text-align: center; padding: 40px 20px 54px; color: var(--muted); font-size: .92rem; }
+    footer .cta { font-size: 1.15rem; font-weight: 700; color: var(--bright); margin-bottom: 10px; }
+    footer a { color: var(--light); text-decoration: none; font-weight: 600; }
+    footer a:hover { color: var(--accent); }
+
+    @media (min-width: 640px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+      header h1 { font-size: 2.4rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===================================================================
+       EDIT ZONE 2 — HEADER / HERO
+       - Photo: swap the initials <div class="avatar">UM</div> for
+         <img class="avatar" src="me.jpg" alt="Utomi Michael Ikechukwu" />
+       - Email, phone, LinkedIn all live
+  ==================================================================== -->
+  <header>
+    <div class="wrap">
+      <span class="open-badge"><span class="dot"></span> Available immediately</span>
+      <br />
+      <div class="avatar">UM</div>
+      <h1>Utomi Michael Ikechukwu</h1>
+      <p class="tagline">AI Business Operations Specialist</p>
+      <p class="subline">Process improvement, business analysis and project coordination — turning messy operations into documented, automated workflows a team can actually run.</p>
+      <p class="location">📍 Accra, Ghana · Open to remote (UK, EU &amp; international) and relocation</p>
+
+      <div class="links">
+        <a class="primary" href="mailto:Utomimichael29@gmail.com">✉️ Email me</a>
+        <a href="https://www.linkedin.com/in/utomi-michael-665a0041b" target="_blank" rel="noopener">💼 LinkedIn</a>
+        <a href="tel:+233504446097">📞 +233 50 444 6097</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><b>12</b><span>Week applied accelerator</span></div>
+        <div class="stat"><b>17</b><span>Portfolio deliverables</span></div>
+        <div class="stat"><b>5</b><span>Site client engagement</span></div>
+        <div class="stat"><b>£2m</b><span>Client revenue analysed</span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================================================================
+       EDIT ZONE 3 — ABOUT SECTION
+  ==================================================================== -->
+  <section class="about">
+    <div class="wrap">
+      <h2>💡 About Me</h2>
+      <p style="margin-bottom: 16px;">
+        I'm an <strong>AI Business Operations Specialist</strong> trained on a 12-week applied accelerator, pairing earlier hands-on experience in client service, administration and IT support with current skills in AI tools, process mapping, business analysis and AI governance.
+      </p>
+      <p style="margin-bottom: 16px;">
+        In a live consulting case study, I audited a <strong>five-site, 25-staff healthcare group</strong>, isolated the three costliest operational constraints on its growth, and set out a <strong>prioritised, costed AI and automation roadmap</strong> to clear them — then pitched the plan to the client founder.
+      </p>
+      <p style="margin-bottom: 16px;">
+        <strong>What makes me different:</strong> I build the governance side as carefully as the automation. Every AI use case I recommend comes with a risk owner, data-handling rules and a human review point — so it can be defended in a board room, not just demonstrated. I'm methodical, quick to turn messy processes into documentation a team can actually follow, and comfortable explaining why a change is worth funding.
+      </p>
+      <p>
+        I'm targeting roles in <strong>AI operations, business analysis, process improvement and project coordination</strong> — anywhere an organisation needs someone to diagnose the bottleneck, design the fix and prove the return. Available immediately.
+      </p>
+      <div class="roles" style="margin-top:18px;">
+        <span class="role">AI Operations Specialist</span>
+        <span class="role">AI Business Analyst</span>
+        <span class="role">AI Adoption / Enablement Coordinator</span>
+        <span class="role">AI Workflow Automation Specialist</span>
+        <span class="role">Business Operations Coordinator</span>
+        <span class="role">Operations Analyst</span>
+        <span class="role">Process Improvement Assistant</span>
+        <span class="role">Project Coordinator / PMO Assistant</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       EDIT ZONE 4 — CV SECTION
+       Drop your CV PDF next to this file and name it:
+       utomi-michael-cv.pdf
+  ==================================================================== -->
+  <section id="cv">
+    <div class="wrap">
+      <h2>📄 My CV</h2>
+      <p class="lead">Download my full CV below, or view my LinkedIn profile for the full picture.</p>
+      <a class="cv-btn" href="utomi-michael-cv.pdf" download>⬇️ Download CV (PDF)</a>
+      <a class="cv-btn" href="https://www.linkedin.com/in/utomi-michael-665a0041b" target="_blank" rel="noopener">View LinkedIn Profile</a>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       EDIT ZONE 5 — SELECTED HIGHLIGHTS
+  ==================================================================== -->
+  <section>
+    <div class="wrap">
+      <h2>⭐ Selected Highlights</h2>
+      <p class="lead">The three things I'd want a hiring manager to know first.</p>
+      <div class="grid">
+        <div class="card">
+          <div class="week">End-to-End Delivery</div>
+          <h3>A joined-up programme, not a set of exercises</h3>
+          <p>Delivered a full operational transformation for a five-site healthcare group — audit, charter, business analysis, process redesign, automation, governance, KPI dashboard and executive pitch — as one continuous engagement.</p>
+        </div>
+        <div class="card">
+          <div class="week">Responsible AI</div>
+          <h3>Governance built as carefully as the automation</h3>
+          <p>An AI Governance Register and Vendor Due-Diligence Scorecard covering data protection, accuracy, bias and human-in-the-loop review — so every recommended AI use case could be defended, not just demonstrated.</p>
+        </div>
+        <div class="card">
+          <div class="week">Daily Practice</div>
+          <h3>AI tools used with a quality bar</h3>
+          <p>Uses ChatGPT and Claude daily for research, analysis, process documentation and stakeholder communication — quality-checking every output for accuracy, tone and data sensitivity before it is used.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       EDIT ZONE 6 — CONSULTING PROJECTS
+       Add a download link inside a card like this:
+       <p><a href="brightpath-business-audit.pdf" download>⬇️ Download (PDF)</a></p>
+  ==================================================================== -->
+  <section>
+    <div class="wrap">
+      <h2>💼 Consulting Projects</h2>
+      <p class="lead">Brightpath Health Clinic — 5 clinics, 25 staff, approx. £2m revenue, West Midlands. An end-to-end transformation built week by week through the JesTech Academy programme.</p>
+      <div class="grid">
+
+        <div class="card">
+          <div class="week">Operational Diagnosis</div>
+          <h3>Operations Audit</h3>
+          <p>Examined all five sites and 25 staff, isolating manual appointment scheduling, decentralised patient records and the absence of management reporting as the three costliest constraints on growth.</p>
+          <span class="badge">✓ Delivered</span>
+        </div>
+
+        <div class="card">
+          <div class="week">Project Management</div>
+          <h3>Project Charter</h3>
+          <p>Defined scope, milestones, RACI, assumptions, risks and success measures — giving the client sponsor a single approved baseline for what would be delivered and when.</p>
+          <span class="badge">✓ Delivered</span>
+        </div>
+
+        <div class="card">
+          <div class="week">Business Analysis</div>
+          <h3>Business Analysis Report</h3>
+          <p>SWOT analysis and stakeholder mapping across clinical, administrative, ownership and patient groups, translated into prioritised requirements and a change sequence based on influence and resistance.</p>
+          <span class="badge">✓ Delivered</span>
+        </div>
+
+        <div class="card">
+          <div class="week">Process Thinking</div>
+          <h3>Process Mapping (Current &amp; Future State)</h3>
+          <p>Documented current-state workflows for booking, patient intake, records and billing hand-off, then designed future-state versions that removed duplicated data entry — plus the SOPs needed to run them.</p>
+          <span class="badge">✓ Delivered</span>
+        </div>
+
+        <div class="card">
+          <div class="week">Problem-Solving</div>
+          <h3>Automation Proposal</h3>
+          <p>Specified AI and workflow automation for the highest-impact bottlenecks with per-workflow cost, effort and projected time-saving — plus governance guardrails: human review points, data-handling rules and clear escalation.</p>
+          <span class="badge">✓ Delivered</span>
+        </div>
+
+        <div class="card">
+          <div class="week">Data Storytelling</div>
+          <h3>Management KPI Dashboard</h3>
+          <p>Built a Looker Studio dashboard giving leadership its first single view of appointment utilisation, no-show rates, revenue by site and staff workload.</p>
+          <span class="badge">✓ Delivered</span>
+        </div>
+
+        <div class="card">
+          <div class="week">AI Governance</div>
+          <h3>AI Governance Register &amp; Vendor Scorecard</h3>
+          <p>Logged each AI use case against risk, ownership and data sensitivity, and scored candidate vendors on security, compliance, cost and fit to produce a defensible recommendation.</p>
+          <span class="badge">✓ Delivered</span>
+        </div>
+
+        <div class="card">
+          <div class="week">Executive Communication</div>
+          <h3>Executive Pitch</h3>
+          <p>Presented the full transformation case and roadmap to the client founder, structured for a non-technical audience and a funding decision.</p>
+          <span class="badge">✓ Delivered</span>
+        </div>
+
+        <div class="card star">
+          <span class="ribbon">⭐ Reusable</span>
+          <div class="week">Integrated Mastery</div>
+          <h3>Reusable AI Assets</h3>
+          <p>A documented prompt library and workflow templates that let a team repeat the analysis without specialist support — the full 17-piece portfolio completes 24 September 2026.</p>
+          <span class="badge">✓ Delivered</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       EDIT ZONE 7 — EXPERIENCE
+  ==================================================================== -->
+  <section>
+    <div class="wrap">
+      <h2>🧭 Experience &amp; Training</h2>
+      <p class="lead">Where the operational instincts came from.</p>
+
+      <div class="job">
+        <div class="when">July 2026 – September 2026</div>
+        <h3>AI Business Operations Specialist Programme — Cohort #1</h3>
+        <div class="org">JesTech Academy · United Kingdom / Remote</div>
+        <ul>
+          <li>Selected for Cohort #1 of a 12-week applied accelerator: 8–10 hours weekly building 17 assessed portfolio deliverables for a single consulting client, evaluated on delivered work rather than written exams.</li>
+          <li>Curriculum covered business operations, project management, business analysis, process improvement and workflow automation, AI governance, data analysis and dashboarding, professional communication and executive presentation.</li>
+          <li>Applied ChatGPT and Claude across research, analysis, process documentation and client communication, quality-checking every output for accuracy, tone and data sensitivity before use.</li>
+          <li>Delivered to a weekly professional rhythm — Monday briefs, midweek office hours, live cohort sessions and Sunday submission deadlines — consistently meeting deadlines without supervision.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="when">May 2021</div>
+        <h3>Administrative &amp; Client Service Intern</h3>
+        <div class="org">Acme Packaging Limited · Nigeria</div>
+        <ul>
+          <li>Acted as first point of contact for clients, handling enquiries and complaints through to resolution and protecting account relationships during busy production periods.</li>
+          <li>Maintained the daily transaction record, keeping an accurate operational log that management relied on for reconciliation and reporting.</li>
+          <li>Scheduled and coordinated internal meetings, produced minutes and tracked the resulting actions to completion.</li>
+          <li>Produced client presentations, reports and design collateral in PowerPoint, and managed the company's social media accounts and customer correspondence.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="when">January 2020</div>
+        <h3>IT Support Intern</h3>
+        <div class="org">Success Computer Center · Nigeria</div>
+        <ul>
+          <li>Resolved client-reported hardware and software issues across printers, workstations and servers, escalating cleanly where a fix sat outside my remit.</li>
+          <li>Supported software installation, patching and updates across client machines, and assisted with maintenance of the company network.</li>
+          <li>Logged and reported daily support activity to the supervisor — the habit of documenting work so that patterns, not just incidents, became visible.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       EDIT ZONE 8 — SKILLS & TOOLKIT
+  ==================================================================== -->
+  <section>
+    <div class="wrap">
+      <h2>🧰 Skills &amp; Toolkit</h2>
+      <p class="lead">The technical and business skills behind the consulting work above.</p>
+
+      <div class="skillgroup">
+        <h4>Operations &amp; Improvement</h4>
+        <div class="chips">
+          <span class="chip">Business Operations</span>
+          <span class="chip">Operational Audit</span>
+          <span class="chip">Process Mapping (as-is / to-be)</span>
+          <span class="chip">Process Improvement</span>
+          <span class="chip">SOP Development</span>
+          <span class="chip">Workflow Automation</span>
+        </div>
+      </div>
+
+      <div class="skillgroup">
+        <h4>Analysis &amp; Reporting</h4>
+        <div class="chips">
+          <span class="chip">Business Analysis</span>
+          <span class="chip">Requirements Gathering</span>
+          <span class="chip">SWOT Analysis</span>
+          <span class="chip">Stakeholder Mapping</span>
+          <span class="chip">KPI Reporting &amp; Dashboards</span>
+          <span class="chip">Data Analysis</span>
+        </div>
+      </div>
+
+      <div class="skillgroup">
+        <h4>Delivery &amp; Communication</h4>
+        <div class="chips">
+          <span class="chip">Project Coordination</span>
+          <span class="chip">Project Charters</span>
+          <span class="chip">Risk &amp; Issue Logs</span>
+          <span class="chip">Documentation</span>
+          <span class="chip">Prioritisation</span>
+          <span class="chip">Executive Reporting &amp; Presentations</span>
+        </div>
+      </div>
+
+      <div class="skillgroup">
+        <h4>AI Enablement &amp; Governance</h4>
+        <div class="chips">
+          <span class="chip">Prompt Engineering</span>
+          <span class="chip">AI Use-Case Identification</span>
+          <span class="chip">Output Quality Review</span>
+          <span class="chip">Responsible AI Use &amp; Governance</span>
+          <span class="chip">AI Vendor Due Diligence</span>
+        </div>
+      </div>
+
+      <div class="skillgroup">
+        <h4>Tools — Working Proficiency</h4>
+        <div class="chips">
+          <span class="chip">ChatGPT</span>
+          <span class="chip">Claude</span>
+          <span class="chip">Looker Studio</span>
+          <span class="chip">Microsoft Office (Excel, Word, PowerPoint)</span>
+          <span class="chip">Google Workspace</span>
+          <span class="chip">Google Sheets CRM</span>
+        </div>
+      </div>
+
+      <div class="skillgroup">
+        <h4>Building Expertise Now</h4>
+        <div class="chips">
+          <span class="chip">Advanced Excel (Pivot Tables, Power Query)</span>
+          <span class="chip">Power BI</span>
+          <span class="chip">Power Automate</span>
+          <span class="chip">Make.com</span>
+          <span class="chip">Zapier</span>
+        </div>
+      </div>
+
+      <div class="skillgroup">
+        <h4>Education</h4>
+        <div class="chips">
+          <span class="chip">HND / ND — Auchi Polytechnic (2017–2022)</span>
+          <span class="chip">Eweka Grammar School (2011–2016)</span>
+          <span class="chip">JesTech Academy — AI Business Ops, Cohort #1</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       EDIT ZONE 9 — FOOTER
+  ==================================================================== -->
+  <footer>
+    <div class="wrap">
+      <p class="cta">Ready to bring operational clarity and responsible AI automation to your organisation?</p>
+      <p>Let's talk —
+        <a href="mailto:Utomimichael29@gmail.com">Utomimichael29@gmail.com</a> ·
+        <a href="tel:+233504446097">+233 50 444 6097</a> ·
+        <a href="https://www.linkedin.com/in/utomi-michael-665a0041b" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+      <p style="margin-top:10px;">© 2026 Utomi Michael Ikechukwu · Trained at JesTech Academy</p>
+    </div>
+  </footer>
+
+</body>
+</html>
